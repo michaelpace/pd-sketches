@@ -1,0 +1,15 @@
+#N canvas 555 135 626 465 12;
+#X text 15 16 sample was prepared with __audioclip_prep.pd;
+#X obj 1 82 veeline~;
+#X obj 75 220 echo~ 250 0.8;
+#X obj 75 244 out~;
+#X obj 303 77 audioclip~ nice 705600;
+#X obj 303 58 __audioclip_load nice 705600;
+#X obj 44 125 scrub~ nice 705600;
+#X msg 1 58 0 0 0 \, 1 16000 0 \, 0 0 16000 \, 1 1000 8000;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 6 0 2 0;
+#X connect 6 1 2 0;
+#X connect 7 0 1 0;

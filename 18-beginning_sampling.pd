@@ -1,0 +1,32 @@
+#N canvas 666 127 450 300 12;
+#X obj 120 56 openpanel;
+#X obj 120 33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 333 29 table mytab;
+#X floatatom 120 128 5 0 0 0 - - -;
+#X obj 120 104 soundfiler;
+#X obj 42 249 out~;
+#X msg 97 271 1;
+#X obj 42 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 42 225 tabplay~ mytab;
+#X obj 42 151 metronome 250 16;
+#X obj 42 175 onbeats 1;
+#X obj 195 243 loadbang;
+#X obj 42 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 42 92 loadbang;
+#X msg 120 80 read -resize \$1 mytab;
+#X connect 0 0 14 0;
+#X connect 1 0 0 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 2;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 8 0 5 1;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 11 0 6 0;
+#X connect 12 0 9 0;
+#X connect 13 0 12 0;
+#X connect 14 0 4 0;

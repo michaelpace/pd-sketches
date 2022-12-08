@@ -1,0 +1,142 @@
+#N canvas 168 116 1076 542 12;
+#X floatatom 92 193 5 0 0 0 - - -;
+#X obj 92 218 mi.grids, f 62;
+#X floatatom 218 127 5 0 3 0 - - -;
+#X floatatom 255 127 5 0 3 0 - - -;
+#X obj 90 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 92 163 - 1;
+#X obj 170 321 snare~;
+#X obj 232 355 hh~, f 8;
+#X obj 257 448 *~ 1;
+#X obj 257 472 out~;
+#X floatatom 457 116 5 0 1 0 - - -;
+#X floatatom 497 112 5 0 1 0 - - -;
+#X floatatom 537 112 5 0 1 0 - - -;
+#X obj 450 162 pack f f f;
+#X obj 497 135 t b f;
+#X obj 544 134 t b f;
+#X obj 326 319 ahdsr~ 5 0 50 0.2 50;
+#X obj 326 373 *~;
+#X obj 341 341 osc~ 440;
+#X obj 359 472 *~ 0.3;
+#X obj 474 254 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 240 280 scaled 0 1 0 200;
+#X obj 240 304 t b f;
+#X obj 422 409 ahdsr~ 5 0 50 0.2 50;
+#X obj 422 463 *~;
+#X obj 435 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 437 430 osc~ 660;
+#X obj 297 127 msphsl 0 1;
+#X text 223 107 x;
+#X text 265 108 y;
+#X text 300 100 randomness depth;
+#X text 444 89 kick \, snare \, hat densities;
+#X obj 48 94 loadbang;
+#X obj 762 89 loadbang;
+#X msg 723 88 0.5;
+#X obj 29 290 t b f;
+#X obj 31 418 lop~ 500;
+#X obj 166 254 scaled 0 1 50 300;
+#X obj 166 278 t b f;
+#X obj 240 328 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 473 279 ahdsr~ 5 0 50 0.2 50;
+#X obj 473 333 *~;
+#X obj 488 300 osc~ 880;
+#X obj 473 357 *~ 0.5;
+#X obj 31 333 kick~ 0 8;
+#X obj 29 266 scaled 0 1 50 100;
+#X msg 686 88 0.27;
+#X msg 831 115 0.20339;
+#X obj 92 139 metronome 75 32;
+#X msg 649 89 0.25;
+#X obj 449 18 lfo tri 0.1;
+#X obj 598 15 lfo sin 0.08;
+#X obj 449 42 scaled 0 1 0.2 0.4;
+#X obj 598 39 scaled 0 1 0.1 0.5;
+#X obj 194 414 *~ 0.15;
+#X obj 194 390 echo~ 100 0.5;
+#X text 626 167 things to try: \; (notes from https://www.youtube.com/watch?v=bw63bVtJDN0)
+\; - add acreil-style input objects for [kick~] \, [snare~] \, [hh~]
+\, [fm~] \, others... - send grids kick output to the bass pitch \;
+- USE ACCENTS!!! \; - in general \, prefer hand-modulation over lfos
+\, esp. in combination with a looper (bake the modulation into the
+recorded audio) \; - filter things mercilessly so they sit in the right
+spot \; - send output of turing machine to timbral things \, e.g. \,
+bass voice's adsr release \, so it's mostly short \, but every now
+and then long \; - for pitch generation \, have three pitch sequencers
+running simultaneously \, and sum them together (maybe weight them
+beforehand with a slider) \, and feed that into all synth voices \,
+which you can gate/trigger separately with grids or turing or w/e...
+and the three individual sequencers have different playback modes like
+loop forwards \, pingpong \, backwards \, etc. \; - add a radio music
+-esque module.;
+#X connect 0 0 1 0;
+#X connect 1 0 45 0;
+#X connect 1 1 37 0;
+#X connect 1 2 21 0;
+#X connect 1 3 16 0;
+#X connect 1 4 25 0;
+#X connect 1 5 20 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 2;
+#X connect 4 0 48 0;
+#X connect 5 0 0 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 7 0 55 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X connect 10 0 13 0;
+#X connect 11 0 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 1 4;
+#X connect 14 0 13 0;
+#X connect 14 1 13 1;
+#X connect 15 0 13 0;
+#X connect 15 1 13 2;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 1;
+#X connect 19 0 8 0;
+#X connect 20 0 40 0;
+#X connect 21 0 22 0;
+#X connect 22 0 39 0;
+#X connect 22 1 7 1;
+#X connect 23 0 24 0;
+#X connect 24 0 19 0;
+#X connect 25 0 23 0;
+#X connect 26 0 24 1;
+#X connect 27 0 1 3;
+#X connect 32 0 4 0;
+#X connect 33 0 34 0;
+#X connect 33 0 46 0;
+#X connect 33 0 49 0;
+#X connect 33 0 47 0;
+#X connect 34 0 12 0;
+#X connect 35 0 44 0;
+#X connect 35 1 44 1;
+#X connect 36 0 8 0;
+#X connect 37 0 38 0;
+#X connect 38 0 6 0;
+#X connect 38 1 6 1;
+#X connect 39 0 7 0;
+#X connect 40 0 41 0;
+#X connect 41 0 43 0;
+#X connect 42 0 41 1;
+#X connect 43 0 19 0;
+#X connect 44 0 36 0;
+#X connect 45 0 35 0;
+#X connect 46 0 11 0;
+#X connect 47 0 27 0;
+#X connect 48 0 5 0;
+#X connect 49 0 10 0;
+#X connect 50 0 52 0;
+#X connect 51 0 53 0;
+#X connect 52 0 11 0;
+#X connect 53 0 12 0;
+#X connect 54 0 8 0;
+#X connect 55 0 54 0;

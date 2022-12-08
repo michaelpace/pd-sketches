@@ -1,0 +1,24 @@
+#N canvas 664 360 450 300 12;
+#X obj 45 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 270 dac~;
+#X obj 225 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 231 90 5 0 0 0 - - -;
+#X obj 45 246 *~ 1;
+#X floatatom 119 199 5 0 0 0 - - -;
+#X obj 75 220 echo~ 250 0.8;
+#X obj 119 172 * 200;
+#X obj 45 126 audioclip~ zz 0.34731 126976;
+#X text 16 15 load sample with __audioclip_load.pd;
+#X text 15 36 sample prepared with __audioclip_prep.pd;
+#X obj 119 148 lfo sin 0.1;
+#X obj 231 63 lfo sin 1;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X connect 4 0 1 1;
+#X connect 5 0 6 1;
+#X connect 6 0 4 0;
+#X connect 7 0 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 3 0;

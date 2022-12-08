@@ -1,0 +1,23 @@
+#N canvas 1174 217 440 300 12;
+#X obj 116 46 msphid;
+#X msg 116 23 7;
+#X obj 116 70 route x;
+#X obj 116 94 sel 1;
+#X obj 55 158 shuffledcollection;
+#X msg 116 118 1;
+#X obj 178 137 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 299 123 counter 16;
+#X floatatom 299 147 5 0 0 0 - - -;
+#X obj 301 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 342 74 clear;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 2;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;

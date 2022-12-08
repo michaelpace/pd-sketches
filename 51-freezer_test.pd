@@ -1,0 +1,36 @@
+#N canvas 446 235 747 507 12;
+#X obj 231 431 out~;
+#X obj 492 57 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 391 298 freezer~;
+#X obj 391 322 *~;
+#X obj 443 322 *~;
+#X obj 486 307 ahdsr~ 50 1000 1000 0.4 1000;
+#X text 401 33 BANG THIS TO HEAR THE [freezer~] IN ACTION;
+#X obj 67 253 audioclip~ simon 427008;
+#X obj 254 200 playback~ simon 427008;
+#X obj 255 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 255 154 loadbang;
+#X obj 25 234 __audioclip_load simon 427008;
+#X obj 183 323 ducker~;
+#X obj 316 365 ducker~;
+#X connect 1 0 2 2;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 3 0 12 0;
+#X connect 4 0 13 0;
+#X connect 5 0 4 1;
+#X connect 5 0 3 1;
+#X connect 8 0 12 1;
+#X connect 8 0 13 1;
+#X connect 8 0 2 0;
+#X connect 8 0 2 1;
+#X connect 8 1 9 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 12 0 0 0;
+#X connect 12 1 0 0;
+#X connect 13 0 0 1;
+#X connect 13 1 0 1;

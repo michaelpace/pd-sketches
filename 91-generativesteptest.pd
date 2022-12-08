@@ -1,0 +1,219 @@
+#N canvas 407 171 1033 524 12;
+#X obj 135 43 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 135 135 generative8step 200 400;
+#X obj 135 159 scaled 0 1 60 73;
+#X obj 135 207 mtof;
+#X obj 135 231 t b f;
+#X obj 135 255 envgen~ 1 5 0.3 200 0 30;
+#X obj 135 279 *~;
+#X obj 135 303 *~, f 5;
+#X obj 167 279 osc~;
+#X obj 506 456 out~;
+#X obj 135 111 stepjumper;
+#X obj 135 63 metronome 150 8;
+#X obj 581 22 mspkey 113;
+#X obj 581 46 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 135 87 stepmuter;
+#X floatatom 74 106 5 0 0 0 - - - 0;
+#X floatatom 74 130 5 0 0 0 - - - 0;
+#N canvas 0 25 608 300 mutesteps 0;
+#X obj 15 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 30 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 45 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 60 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 75 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 90 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 105 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 120 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 15 79 outlet;
+#X obj 259 158 loadbang;
+#X msg 259 182 1;
+#X obj 429 154 inlet;
+#X obj 429 178 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X msg 15 55 1 \$1;
+#X msg 85 55 2 \$1;
+#X msg 155 55 3 \$1;
+#X msg 225 56 4 \$1;
+#X msg 295 55 5 \$1;
+#X msg 365 55 6 \$1;
+#X msg 435 55 7 \$1;
+#X msg 505 55 8 \$1;
+#X connect 0 0 13 0;
+#X connect 1 0 14 0;
+#X connect 2 0 15 0;
+#X connect 3 0 16 0;
+#X connect 4 0 17 0;
+#X connect 5 0 18 0;
+#X connect 6 0 19 0;
+#X connect 7 0 20 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 0;
+#X connect 10 0 6 0;
+#X connect 10 0 5 0;
+#X connect 10 0 4 0;
+#X connect 10 0 3 0;
+#X connect 10 0 2 0;
+#X connect 10 0 1 0;
+#X connect 10 0 0 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;
+#X connect 15 0 8 0;
+#X connect 16 0 8 0;
+#X connect 17 0 8 0;
+#X connect 18 0 8 0;
+#X connect 19 0 8 0;
+#X connect 20 0 8 0;
+#X coords 0 -1 1 1 120 15 2 15 10;
+#X restore 201 20 pd mutesteps;
+#N canvas 0 25 703 300 jumpsteps 0;
+#X obj 15 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 30 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 45 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 60 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 75 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 90 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 105 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 120 10 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 15 79 outlet;
+#X obj 249 133 inlet;
+#X obj 461 239 loadbang;
+#X msg 461 263 1;
+#X msg 15 55 1 \$1;
+#X msg 85 55 2 \$1;
+#X msg 155 55 3 \$1;
+#X msg 225 55 4 \$1;
+#X msg 295 55 5 \$1;
+#X msg 365 55 6 \$1;
+#X msg 436 55 7 \$1;
+#X msg 505 55 8 \$1;
+#X obj 249 157 route 1 2 3 4 5 6 7 8;
+#X connect 0 0 12 0;
+#X connect 1 0 13 0;
+#X connect 2 0 14 0;
+#X connect 3 0 15 0;
+#X connect 4 0 16 0;
+#X connect 5 0 17 0;
+#X connect 6 0 18 0;
+#X connect 7 0 19 0;
+#X connect 9 0 20 0;
+#X connect 10 0 11 0;
+#X connect 11 0 7 0;
+#X connect 11 0 6 0;
+#X connect 11 0 5 0;
+#X connect 11 0 4 0;
+#X connect 11 0 3 0;
+#X connect 11 0 2 0;
+#X connect 11 0 1 0;
+#X connect 11 0 0 0;
+#X connect 12 0 8 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;
+#X connect 15 0 8 0;
+#X connect 16 0 8 0;
+#X connect 17 0 8 0;
+#X connect 18 0 8 0;
+#X connect 19 0 8 0;
+#X connect 20 0 0 0;
+#X connect 20 1 1 0;
+#X connect 20 2 2 0;
+#X connect 20 3 3 0;
+#X connect 20 4 4 0;
+#X connect 20 5 5 0;
+#X connect 20 6 6 0;
+#X connect 20 7 7 0;
+#X coords 0 -1 1 1 120 15 2 15 10;
+#X restore 201 35 pd jumpsteps;
+#X obj 601 117 sel 1 5, f 38;
+#X obj 506 426 *~ 1;
+#X obj 601 143 kick~;
+#X obj 732 143 snare~;
+#X obj 716 290 *~ 0.8;
+#X obj 799 199 hh~, f 6;
+#X obj 797 168 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 41 24 loadbang;
+#X text 660 21 q;
+#X obj 683 27 loadbang;
+#X obj 169 14 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 716 314 *~, f 26;
+#X obj 894 25 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X msg 894 266 \$1 50;
+#X obj 894 290 line~;
+#X obj 135 183 quantizedmode phrygian 60;
+#X text 914 22 toggle drums;
+#X obj 776 32 mspkey 114;
+#X obj 776 56 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 735 77 spigot;
+#X obj 711 70 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X text 323 33 < which notes to play \, in sequence;
+#X text 323 17 < whether to play any note this beat;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 2 0 34 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 8 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;
+#X connect 7 0 20 0;
+#X connect 8 0 7 1;
+#X connect 10 0 1 0;
+#X connect 10 0 16 0;
+#X connect 11 0 14 0;
+#X connect 11 0 39 0;
+#X connect 11 0 19 0;
+#X connect 12 0 13 0;
+#X connect 13 0 1 1;
+#X connect 14 0 10 0;
+#X connect 14 0 15 0;
+#X connect 17 0 14 1;
+#X connect 17 0 18 0;
+#X connect 18 0 10 1;
+#X connect 19 0 21 0;
+#X connect 19 1 22 0;
+#X connect 19 2 25 0;
+#X connect 20 0 9 0;
+#X connect 20 0 9 1;
+#X connect 21 0 23 0;
+#X connect 22 0 23 0;
+#X connect 23 0 30 0;
+#X connect 24 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 0 0;
+#X connect 28 0 13 0;
+#X connect 29 0 17 0;
+#X connect 30 0 20 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 33 0 30 1;
+#X connect 34 0 3 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 1;
+#X connect 38 0 22 0;
+#X connect 39 0 38 0;

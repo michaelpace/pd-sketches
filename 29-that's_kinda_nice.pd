@@ -1,0 +1,28 @@
+#N canvas 0 23 685 402 12;
+#X obj 285 316 out~;
+#X obj 286 283 echo~ 250 0.5;
+#X obj 440 120 ahdsr~ 20 0 100 0.5 200;
+#X obj 48 139 osc~ 440;
+#X obj 48 163 vibrato~ 2 2;
+#X obj 48 188 *~, f 17;
+#X obj 440 95 metronome 500 8;
+#X obj 440 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 48 68 scaled 0 1 0 1000;
+#X obj 48 92 quantized 110 220 330 440 550 660 770 880 990;
+#X obj 440 48 loadbang;
+#X obj 206 286 *~ 0.7;
+#X obj 48 44 lfo sin 0.1;
+#X connect 1 0 0 1;
+#X connect 2 0 5 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 0 11 0;
+#X connect 6 0 2 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 3 0;
+#X connect 10 0 7 0;
+#X connect 11 0 0 0;
+#X connect 12 0 8 0;
