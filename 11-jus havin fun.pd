@@ -1,15 +1,15 @@
-#N canvas 0 25 955 755 12;
+#N canvas 0 38 955 755 12;
 #X obj 338 163 kick~ 1 1 1 1 1, f 34;
-#X obj 338 144 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 338 100 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 338 144 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 338 100 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 338 120 metro;
-#X floatatom 370 96 5 0 0 0 - - -;
+#X floatatom 370 96 5 0 0 0 - - - 0;
 #X obj 459 262 * 0.666667;
 #X obj 185 180 ahdsr~ 5 0 20 0.8 50;
 #X obj 98 205 fm~ 1 1;
-#X floatatom 98 126 5 0 0 0 - - -;
+#X floatatom 98 126 5 0 0 0 - - - 0;
 #X obj 98 233 *~;
 #X obj 401 286 echo~ 250 0.5;
 #X obj 201 95 random 5;
@@ -38,7 +38,7 @@
 #X obj 586 572 loadbang;
 #X obj 530 426 i;
 #X obj 560 425 + 1;
-#X floatatom 530 450 5 0 0 0 - - -;
+#X floatatom 530 450 5 0 0 0 - - - 0;
 #X obj 530 496 sel 0;
 #X msg 585 603 1500;
 #X obj 530 472 % 2;
@@ -49,8 +49,8 @@
 #X obj 82 412 mtof;
 #X obj 81 366 maybe 0.3;
 #X obj 81 390 t b f;
-#X obj 123 435 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 123 435 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 119 468 ahdsr~ 10 200 20 0.8 20;
 #X obj 82 436 / 4;
 #X obj 17 475 crackle~;
@@ -68,6 +68,7 @@
 #X obj 400 312 vibrato~ 1 0.05;
 #X obj 195 301 vibrato~ 1 0.05;
 #X obj 81 539 vibrato~ 2 0.2;
+#X obj 269 43 loadbang;
 #X connect 0 0 10 0;
 #X connect 0 0 42 0;
 #X connect 1 0 0 0;
@@ -151,3 +152,4 @@
 #X connect 63 0 42 0;
 #X connect 64 0 42 0;
 #X connect 65 0 52 0;
+#X connect 66 0 2 0;
