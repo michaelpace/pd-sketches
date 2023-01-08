@@ -87,6 +87,8 @@
 #X obj 920 397 min 0.5;
 #X obj 618 525 tr8sbd;
 #X obj 716 527 tr8ssd;
+#X obj 439 45 r ffb8;
+#X obj 439 69 sel 1;
 #X connect 1 0 2 2;
 #X connect 2 0 20 0;
 #X connect 3 0 4 0;
@@ -169,3 +171,5 @@
 #X connect 77 0 81 0;
 #X connect 78 0 74 0;
 #X connect 79 0 75 0;
+#X connect 82 0 83 0;
+#X connect 83 0 3 0;
