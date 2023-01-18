@@ -64,7 +64,7 @@
 #X obj 853 110 forgivingspigot;
 #X obj 1015 113 forgivingspigot;
 #X obj 1213 113 forgivingspigot;
-#X obj 125 295 generative8step 80 200;
+#X obj 125 295 generative16step 80 200;
 #X obj 197 125 mspkey 102;
 #X obj 125 87 t f f f, f 10;
 #X obj 158 152 spigot;
@@ -118,9 +118,9 @@ pitches \, etc. at once) \, which i can then recall state to return
 to how things were \; - feed fills into a markov chain \, so you can
 lock something like that fill pattern into place without changing underlying
 pattern \; - not this patch \, but try applying stepmuter \, stepjumper
-\, and generative8step to my dfam clone \; - pattern offset-er where
+\, and generative16step to my dfam clone \; - pattern offset-er where
 you can shift the pattern over some (just add the offset after the
-metronome \, and maybe mod it?) \; - let generative8step take an int
+metronome \, and maybe mod it?) \; - let generative16step take an int
 -1 \, 0 \, and 1 instead of just 0 or 1 for its second inlet. these
 will cause it to sample from three randwalks (one running lower \,
 one running same pitch range \, and one running higher). then you can

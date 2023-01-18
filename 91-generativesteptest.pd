@@ -1,7 +1,7 @@
 #N canvas 4 171 1440 524 12;
 #X obj 135 43 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 135 135 generative8step 200 400;
+#X obj 135 135 generative16step 200 400;
 #X obj 135 159 scaled 0 1 60 73;
 #X obj 135 207 mtof;
 #X obj 135 231 t b f;
