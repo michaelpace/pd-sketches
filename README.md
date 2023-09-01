@@ -1,1 +1,1 @@
-various pd sketches and experiments. most rely on patches from [pd-core](https://github.com/michaelpace/pd-core).
+various pd sketches and experiments. most rely on patches from [pd-core](https://github.com/michaelpace/pd-core), and some wind up in videos in [this youtube playlist](https://www.youtube.com/playlist?list=PLvBc7thFd16uB9l5DT8jEYMX5dnqUNhaw).
